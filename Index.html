@@ -1,21 +1,43 @@
 <html>
     <head>
+        <style>
+            .mydiv {
+                border: 5px outset green;
+                background-color: darkblue;
+                text-align: center;
+            }
+        </style>
         <title>Nettisivut</title>
     </head>
     <body>
+        <div class="mydiv">
+            <h1>Testailua.</h1>
+        </div>
+        <a href="https://www.salpaus.fi/"> Linkki salpauksen sivuille</a>
+        <br>
+        <a href="portafolio.html"> Portafolio sivu</a>
         <h1>Vastaukset tehtävien kysymyksiin</h1>
         <p> Tyhjän tägin ero on se että siihe ei tarvitse laittaa loppua</p>
         <p>Case sensitive tarkoittaa eroa isojen ja pienien kirjaimien välillä, tätä käytetään esim salasanoissa</p>
         <h2>Tämä on heading2 johon yleensä laitetaan tärkeää tietoa niinkuin heading1:ssä</h2>
         <h3>Heading:ssä tärkeys järjestys menee 1.tärkein ja 6.Vähiten tärkein</h3>
         <h4>h(numero) on lyhenne sanasta Heading</h4>
-        <img src="https://static.jopox.fi/pelicanssalibandy/imagebank/13969_huge.jpg" alt="Kaveristani kuva" width="500" height="600">
+        <img src="https://static.jopox.fi/pelicanssalibandy/imagebank/13969_huge.jpg" alt="Kaveristani kuva" width="100" height="200">
+        <!-- minkä takia noi label rivil 29,31 ja 33 o punasii? -->
+        <p>Mikä on sinun lempi jäätelö</p>
+        <form>
+            <input type="radio" id="Suklaa" name="fav_jaatelo" value="Suklaa"
+            <label for="Suklaa">Suklaa</label><br>
+            <input type="radio" id="Vanilia" name="fav_jaatelo" value="Vanilia"
+            <label for="Vanilia">Vanilia</label><br>
+            <input type="radio" id="Mansikka" name="fav_jaatelo" value="Mansikka"
+            <label for="Mansikka">Mansikka</label><br>
+        </form>
         <h1>Ostoslista</h1>
         <ol>
             <li>Maitoa</li>
             <li>Makkaraa</li>
             <li>Juoatavaa</li>
         </ol>
-        <a href="https://www.salpaus.fi/"> Linkki salpauksen sivuille</a>
     </body>
 </html>
