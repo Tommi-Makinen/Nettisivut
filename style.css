@@ -22,3 +22,12 @@ body {
     text-align: center;
     list-style-position: inside;
 }
+
+.div2{
+    border: 5px outset grey;
+    border-radius: 25px;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles2.css">
+    <meta charset="UTF-8" />
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <button class="topright" onclick="tumma()">Vaihda yötilaan</button>
+    <script>
+        function tumma() {
+            var element = document.body; // laitetaan body elementiin, eli element meinaa bodyy
+            element.classList.toggle("tumma"); // Togletaan tumma bodyyn
+        }
+    </script>
+    <p id="lause">Tämä teksti vaihtuu jos painat nappulaa</p>
+    <button type="button" onclick='document.getElementById("lause").innerHTML = "vau"'>Kokeile</button>
+    <h2>Mitä eroa on var, let ja const</h2>
+    <ol>
+        <li>Var let ja const ovat tapoja muistaa data</li>
+        <li>Var on ns outdated jota ei yleensä käytetä nykynetti sivuilla</li>
+        <li>let:in ja cost:in isoin ero on se että const:ia ei voi vaihtaa, esim jos olet defiainut luvun constilla ja teet esim 2+ se const luku, niin se ei ole mahdollista</li>
+    </ol>
+    <p>Kuinka vanha olet?</p>
+    <input id="ikä" value="18" />
+    <button onclick="ikänappula()">Lähetä</button>
+    <p id="ikävastaus"></p>
+    <script>
+        function ikänappula() {
+            let vote; // määritä text johon tallenetaan info
+            let ikä = Number(document.getElementById("ikä").value);
+            if (isNaN(ikä)) { // jos ei oo numero 
+                vote = "Käytä vain numeroita"; // muuta votesta tohon tekstii
+            } else {
+                vote = (ikä < 18) ? "Alaikäinen" : "Täysi-ikäinen"; // mutta jos seo numero kato onks se alle 18
+            }
+            document.getElementById("ikävastaus").innerHTML = "Olet " + vote // printaa tulokset
+        }
+    </script>
+    <p id="hloop"></p> 
+    <script>
+        let text = ""; // määritä text johon tallenetaan info
+        let i = 0; // määritä i ja sen arvoks 0
+        while (i < 5) { // niin kauan toista kun i on alle 5
+            text += "Huhuu?!" // lisätään toi huhuu muuttujaan text
+            i++; // listään i muuttujaan joten se ns träckää mont kertaa seo tehty
+        }
+        document.getElementById("hloop").innerHTML = text; // printaa :)
+    </script>
+    <h1>Eläinlista</h1>
+    <ul id="animalList"></ul>
+
+    <script>
+        let eläinlista = ["Koira", "Kissa", "Hevonen", "Hiiri", "Marsu"]; //määritä eläinlista ja mitä siihen sisältyy
+
+        for (let i = 0; i < eläinlista.length; i++) { // käy loopin avulla läpi ja lisää loppuun !
+            eläinlista[i] += "!";
+        }
+        // lisätää toi päivitetty lista html
+        let animalList = document.getElementById("animalList");
+        for (let i = 0; i < eläinlista.length; i++) {
+            let listItem = document.createElement("li");
+            listItem.textContent = eläinlista[i];
+            animalList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
